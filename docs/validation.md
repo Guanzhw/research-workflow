@@ -10,6 +10,18 @@
 
 上述检查验证插件结构、说明和审查处理，不等于外部研究框架已安装或在本机可运行。详细外部核查层级见[生态矩阵](landscape.md)与[自动研究比较](autoresearch-options.md)。
 
+## 快速入门路径更新（v0.3.0）
+
+2026-09-26 的本地检查：
+
+- `python C:\Users\QQ110\.codex\skills\.system\skill-creator\scripts\quick_validate.py skills\research-workflow` → `Skill is valid!`
+- `python C:\Users\QQ110\.codex\skills\.system\plugin-creator\scripts\validate_plugin.py .` → `Plugin validation passed`
+- 核对 README、新的学习工作流调查、本验证记录、技能入口、领域入门模板和技术演进参考中的相对 Markdown 链接 → 6 个文件，0 处断链。
+- 独立审查发现模板原先只容纳旧／新方法对照、缺少实际作答记录，以及 README 将方案调查误写成必经实验；这些问题已分别改为通用机制例子、明确记录未作答／反馈，并将实验设为按需分支。
+- 独立前向试用：给只懂 Python 和少量机器学习、希望在两小时内了解 RAG 且暂不做项目实验的学习者生成首轮答复。初版把多篇证据论文都排进必读路线；据此收紧技能指令，区分引用与必读材料，并单列当前方法族地图。复测答复包含当前方法地图、注明来源的技术演进、小例子、限时必读／选读路线和标为未作答的迁移题，没有强制安排工程实验。
+
+这些检查证明技能结构、文件链接及该案例中的指令行为；它们未测量学习者的理解、速度或长期保持，也不构成对 RAG 示例每项事实的独立审校。
+
 ## 跨领域纸面迁移
 
 独立 Reviewer 使用“提升 JSON 解析服务吞吐量，同时保持正确输出和内存限制”检验此技能是否依赖驾驶术语：
