@@ -1,0 +1,23 @@
+{
+  "name": "research-workflow",
+  "version": "0.2.0",
+  "description": "A cross-domain learning and engineering research workflow that reuses existing tools and supports bounded autoresearch.",
+  "author": {
+    "name": "Guanzhw"
+  },
+  "keywords": ["research", "reproducibility", "experiments", "evidence", "autoresearch"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Research Workflow",
+    "shortDescription": "Plan and audit reproducible research cycles.",
+    "longDescription": "Learn a domain through primary sources and mechanism exercises, reuse suitable open tools, and test engineering ideas through bounded, auditable experiments.",
+    "developerName": "Guanzhw",
+    "category": "Productivity",
+    "capabilities": ["Research", "Reproducibility", "Experiment tracking"],
+    "defaultPrompt": [
+      "Use Research Workflow to learn a field and test one engineering question.",
+      "Compare existing tools before building a workflow for this project.",
+      "Freeze evaluation and a run ledger for a bounded autoresearch loop."
+    ]
+  }
+}

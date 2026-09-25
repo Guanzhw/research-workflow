@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Workflow"
+  short_description: "Learn a domain and test ideas with evidence"
+  default_prompt: "Use $research-workflow to learn this domain, reuse suitable tools, and plan a bounded engineering experiment."
