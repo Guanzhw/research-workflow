@@ -17,6 +17,8 @@ Help the user build a usable understanding of a field or make and test an engine
 
 Paths may combine in one task. An orientation goal does not need an engineering decision or experiment. Move into the engineering study path only when the learner's goal calls for one.
 
+When working inside OpenResearch, read `references/openresearch.md` for the division of learning, retrieval, experiment, and evidence responsibilities.
+
 ## Enter a domain
 
 1. Infer or ask only for missing details that change the route: the target field, prior knowledge, intended capability, time budget, and preferred depth. A learner may want an overview, the ability to read primary sources, or the ability to build something.

@@ -22,6 +22,17 @@
 
 这些检查证明技能结构、文件链接及该案例中的指令行为；它们未测量学习者的理解、速度或长期保持，也不构成对 RAG 示例每项事实的独立审校。
 
+## OpenResearch v0.2.10 接入烟测
+
+2026-09-26 在 Windows 上安装官方 `orx 0.2.10` 发行包，核对包的 SHA-256 为 `d85247f8b1d17a1bf0fc649ae8320f8d55388ecb376bb29696d4a70791d16fad`。从本技能目录生成 ZIP；最终包 SHA-256 为 `a9ebfaa5b9e4a7dc6c7bb72f1002780b4b850615c0925ebbe503f19f79ea6a7c`。
+
+- `orx skills add` 返回 `name=research-workflow`，上传目录的 12 个文件与 ZIP 逐字节一致；OpenResearch 的“自定义”页面显示该技能，聊天中的 `/research-workflow` 选择器也能找到它。
+- 在隔离数据目录中以 Codex 新建“RAG 入门技能接入烟测”会话；会话工作树包含 `.agents/skills/research-workflow/` 及所需的参考、模板。实际答复引用了主技能、`references/openresearch.md` 和 `templates/domain-onboarding.md`，UI 显示本轮用时 1 分 43 秒。此任务只检验接入，不评价 RAG 内容质量或学习效果。
+- 工具活动显示三次失败的文件定位或读取操作后，代理才用绝对路径读到上传版本；其中一次尝试访问本机旧版插件目录。这证实相同名称的已安装插件仍可能干扰技能定位；对照试验必须隔离并核查两臂的真实技能来源。此烟测没有 A/B 对照。
+- 最初将 `ORX_DATA_DIR` 放在与 Codex 登录目录不同的 Windows 盘符，启动会话时因跨盘硬链接失败；把试点数据目录放到同盘后成功。这个限制来自当前 OpenResearch 的 Windows 链接回退路径。
+
+本轮未运行工程实验，也未测量 tokens 或总成本；不能据此断言研究质量或效率提升。
+
 ## 跨领域纸面迁移
 
 独立 Reviewer 使用“提升 JSON 解析服务吞吐量，同时保持正确输出和内存限制”检验此技能是否依赖驾驶术语：

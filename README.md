@@ -44,6 +44,19 @@
 
 模板在 [`skills/research-workflow/templates/`](skills/research-workflow/templates/)；按任务取用，不强制增加整套目录。自动循环中涉及发布、外部写入或付费资源的动作仍按实际任务的授权范围处理。
 
+## 在 OpenResearch 中使用
+
+OpenResearch CLI v0.2.10 支持将完整技能 ZIP 导入所有项目。先把 `skills/research-workflow/` 打包，再导入；单独导入 `SKILL.md` 会缺少模板与参考文件：
+
+```sh
+python scripts/package_openresearch.py -o research-workflow-openresearch.zip
+orx skills add research-workflow-openresearch.zip
+```
+
+打包脚本按固定文件顺序和时间戳写入当前技能目录的所有文件，ZIP 内保留 `research-workflow/SKILL.md`、`references/` 和 `templates/` 的相对路径。`orx skills add` 返回保存的名称及是否替换旧版本；上传技能随后进入 OpenResearch 会话的原生技能目录。导入后，在新会话的技能列表选择 `research-workflow`，核对会话目录中的 `SKILL.md`、`references/openresearch.md` 和 `templates/domain-onboarding.md`，再运行一次只需领域入门的任务，检查实际答复中的方法地图、先修路线和理解题。`orx skill <name>` 只读取 OpenResearch 内置技能，不能用来检验这次导入。运行分工与 A/B 隔离见[OpenResearch 适配说明](skills/research-workflow/references/openresearch.md)。
+
+Windows 上以 Codex 运行会话时，若使用自定义 `ORX_DATA_DIR`，将它放在 `CODEX_HOME` 所在磁盘；当前 OpenResearch 在无符号链接权限时会改用硬链接，跨盘会话启动可能失败。
+
 ## 真实项目适配
 
 [自动驾驶模型开发教程](https://github.com/Guanzhw/autonomous-driving-model-development-tutorial)是第一个实例：四个已交付单元各有研究设计卡，既有 MetaDrive CLI 提供真实闭环，`scripts/run_research.py` 为每次运行保留来源、日志和轨迹；学习者再从 trace 复核指标并做下一轮决定。插件只规定跨领域的研究决策，驾驶领域的地图、`env.step`、指标和失败口径由该项目负责。
