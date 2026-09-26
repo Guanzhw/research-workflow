@@ -37,6 +37,6 @@ B 在首回合持续检索且迟迟未写出文件。为控制费用，向同一
 | `without-workflow.md` | 12,853 | `39B74AD5FE1DC291AABFCE0F101BDD3D2BBD56CEF132C2E9AC768510AD2BED95` |
 | `with-workflow.md` | 17,632 | `9784A9EC150A54416632ED0B94F109BFFFD8D584D53DA2AD37CE511D4FBC860A` |
 
-两个哈希均与 OpenResearch artifacts 原件相同。仓库用 `.gitattributes` 的 `-text` 保留原始文件字节。此次没有安排新的内容 reviewer；报告效果由用户主观评审。
+两个哈希均与 OpenResearch artifacts 原件相同。仓库用 `.gitattributes` 的 `-text` 保留原始文件字节。后续由 Luna Max reviewer 对两份报告作了[对照评审](comparative-review.md)；报告效果仍由用户主观评审。
 
 自动审批阻止了清除 OpenResearch `user-skills/excluded/research-workflow` 标记，只返回 `blocked by policy`。该标记目前仍在；上传版技能和 Codex 插件配置已恢复，技能在 OpenResearch 中可见且可调用。该标记只影响将来移除上传版技能之后的镜像技能回退。
