@@ -1,0 +1,2 @@
+experiments/openresearch-embodied-luna-pair-20260926/without-workflow.md -text whitespace=-trailing-space,-blank-at-eof
+experiments/openresearch-embodied-luna-pair-20260926/with-workflow.md -text whitespace=-trailing-space,-blank-at-eof
