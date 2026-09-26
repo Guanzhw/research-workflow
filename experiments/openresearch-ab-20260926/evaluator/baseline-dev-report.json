@@ -1,0 +1,273 @@
+{
+  "schema_version": 1,
+  "mode": "dev",
+  "solution_path": "D:\\CodexWorktrees\\bc5b\\research-workflow\\experiments\\openresearch-ab-20260926\\fixture\\solution.py",
+  "solution_sha256": "1c38ddf8ca0225dfbe4c38bd32c9e098302c8bee9eba53bbef6539914caf1b0a",
+  "evaluator_sha256": "df585eaa878d75a7737b58aff9115bb7eb3e1e17b8b4f21d2d67bdd84c49fc8e",
+  "config": {
+    "rows_per_dataset": 1800000,
+    "repeats": 2,
+    "timeout_sec": 120,
+    "job_memory_mib": 512
+  },
+  "invocation_checks": [
+    {
+      "id": "no_arguments",
+      "command": [
+        "D:\\uv-envs\\base\\.venv\\Scripts\\python.exe",
+        "-B",
+        "D:\\CodexWorktrees\\bc5b\\research-workflow\\experiments\\openresearch-ab-20260926\\fixture\\solution.py"
+      ],
+      "status": "pass",
+      "returncode": 1,
+      "elapsed_sec": 0.076218,
+      "peak_job_memory_bytes": 9957376
+    },
+    {
+      "id": "missing_input",
+      "command": [
+        "D:\\uv-envs\\base\\.venv\\Scripts\\python.exe",
+        "-B",
+        "D:\\CodexWorktrees\\bc5b\\research-workflow\\experiments\\openresearch-ab-20260926\\fixture\\solution.py",
+        "C:\\Users\\QQ110\\AppData\\Local\\Temp\\openresearch-eval-ryq_6e5f\\intentionally-missing-input.jsonl",
+        "C:\\Users\\QQ110\\AppData\\Local\\Temp\\openresearch-eval-ryq_6e5f\\missing-input.actual.jsonl"
+      ],
+      "status": "pass",
+      "returncode": 1,
+      "elapsed_sec": 0.109167,
+      "peak_job_memory_bytes": 12558336
+    }
+  ],
+  "edge_cases": [
+    {
+      "id": "empty",
+      "rows": 0,
+      "input_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "D:\\uv-envs\\base\\.venv\\Scripts\\python.exe",
+        "-B",
+        "D:\\CodexWorktrees\\bc5b\\research-workflow\\experiments\\openresearch-ab-20260926\\fixture\\solution.py",
+        "C:\\Users\\QQ110\\AppData\\Local\\Temp\\openresearch-eval-ryq_6e5f\\edge-empty.input.jsonl",
+        "C:\\Users\\QQ110\\AppData\\Local\\Temp\\openresearch-eval-ryq_6e5f\\edge-empty.actual.jsonl"
+      ],
+      "returncode": 0,
+      "elapsed_sec": 0.077713,
+      "peak_job_memory_bytes": 10260480,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "pass"
+    },
+    {
+      "id": "no_boolean_true",
+      "rows": 7,
+      "input_sha256": "fa16a59ebc4b8a037327a8c4fc26e95f291140412348176d631d54e22eff0a8d",
+      "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "D:\\uv-envs\\base\\.venv\\Scripts\\python.exe",
+        "-B",
+        "D:\\CodexWorktrees\\bc5b\\research-workflow\\experiments\\openresearch-ab-20260926\\fixture\\solution.py",
+        "C:\\Users\\QQ110\\AppData\\Local\\Temp\\openresearch-eval-ryq_6e5f\\edge-no_boolean_true.input.jsonl",
+        "C:\\Users\\QQ110\\AppData\\Local\\Temp\\openresearch-eval-ryq_6e5f\\edge-no_boolean_true.actual.jsonl"
+      ],
+      "returncode": 0,
+      "elapsed_sec": 0.074708,
+      "peak_job_memory_bytes": 9998336,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "pass"
+    },
+    {
+      "id": "escaped_unicode_tenant",
+      "rows": 4,
+      "input_sha256": "286eab6a959f74ef3fc1dea56e9657ef483a32e2a8710d58eed2cf8d7cbf310f",
+      "expected_sha256": "badc9d4be07655b23a5d687ff4c2c93d669a3d42cb3c90b56b1709b2441f5090",
+      "command": [
+        "D:\\uv-envs\\base\\.venv\\Scripts\\python.exe",
+        "-B",
+        "D:\\CodexWorktrees\\bc5b\\research-workflow\\experiments\\openresearch-ab-20260926\\fixture\\solution.py",
+        "C:\\Users\\QQ110\\AppData\\Local\\Temp\\openresearch-eval-ryq_6e5f\\edge-escaped_unicode_tenant.input.jsonl",
+        "C:\\Users\\QQ110\\AppData\\Local\\Temp\\openresearch-eval-ryq_6e5f\\edge-escaped_unicode_tenant.actual.jsonl"
+      ],
+      "returncode": 0,
+      "elapsed_sec": 0.07202,
+      "peak_job_memory_bytes": 9969664,
+      "output_sha256": "badc9d4be07655b23a5d687ff4c2c93d669a3d42cb3c90b56b1709b2441f5090",
+      "status": "pass"
+    },
+    {
+      "id": "empty_tenant",
+      "rows": 4,
+      "input_sha256": "c4f5d5925bc52aa2d052e362574326855f6ce2087831c6eabe8996dc8c38d668",
+      "expected_sha256": "14a525d171772728d6de6ad41ea63a12bd3c9e833b96fa78dd1203d99d2f7579",
+      "command": [
+        "D:\\uv-envs\\base\\.venv\\Scripts\\python.exe",
+        "-B",
+        "D:\\CodexWorktrees\\bc5b\\research-workflow\\experiments\\openresearch-ab-20260926\\fixture\\solution.py",
+        "C:\\Users\\QQ110\\AppData\\Local\\Temp\\openresearch-eval-ryq_6e5f\\edge-empty_tenant.input.jsonl",
+        "C:\\Users\\QQ110\\AppData\\Local\\Temp\\openresearch-eval-ryq_6e5f\\edge-empty_tenant.actual.jsonl"
+      ],
+      "returncode": 0,
+      "elapsed_sec": 0.071029,
+      "peak_job_memory_bytes": 9994240,
+      "output_sha256": "14a525d171772728d6de6ad41ea63a12bd3c9e833b96fa78dd1203d99d2f7579",
+      "status": "pass"
+    },
+    {
+      "id": "large_signed_sums",
+      "rows": 4,
+      "input_sha256": "14e2c762c8d869dbe880796e0c3da902a3761e334dc062567e47f02286f85629",
+      "expected_sha256": "af85a20cf52d9e63bfc3499164d968713e876bd68ddc8df8c452eedf3b8ae977",
+      "command": [
+        "D:\\uv-envs\\base\\.venv\\Scripts\\python.exe",
+        "-B",
+        "D:\\CodexWorktrees\\bc5b\\research-workflow\\experiments\\openresearch-ab-20260926\\fixture\\solution.py",
+        "C:\\Users\\QQ110\\AppData\\Local\\Temp\\openresearch-eval-ryq_6e5f\\edge-large_signed_sums.input.jsonl",
+        "C:\\Users\\QQ110\\AppData\\Local\\Temp\\openresearch-eval-ryq_6e5f\\edge-large_signed_sums.actual.jsonl"
+      ],
+      "returncode": 0,
+      "elapsed_sec": 0.070954,
+      "peak_job_memory_bytes": 10194944,
+      "output_sha256": "af85a20cf52d9e63bfc3499164d968713e876bd68ddc8df8c452eedf3b8ae977",
+      "status": "pass"
+    }
+  ],
+  "datasets": [
+    {
+      "id": "dev-1",
+      "seed": 20903,
+      "rows": 1800000,
+      "input_bytes": 126443149,
+      "input_sha256": "cc85149927885348429c03cdb5ac8abe165c30c06da276d19db4ac2bc01f72b4",
+      "expected_sha256": "d19b19917422fa843beb047bb660aefb959e3881864879774b7712ebe00cdd3e",
+      "runs": [
+        {
+          "repeat": 1,
+          "command": [
+            "D:\\uv-envs\\base\\.venv\\Scripts\\python.exe",
+            "-B",
+            "D:\\CodexWorktrees\\bc5b\\research-workflow\\experiments\\openresearch-ab-20260926\\fixture\\solution.py",
+            "C:\\Users\\QQ110\\AppData\\Local\\Temp\\openresearch-eval-ryq_6e5f\\dev-1.input.jsonl",
+            "C:\\Users\\QQ110\\AppData\\Local\\Temp\\openresearch-eval-ryq_6e5f\\dev-1.run-1.jsonl"
+          ],
+          "returncode": 0,
+          "elapsed_sec": 2.462056,
+          "rows_per_sec": 731096.29,
+          "input_mib_per_sec": 48.98,
+          "peak_job_memory_bytes": 10174464,
+          "output_sha256": "d19b19917422fa843beb047bb660aefb959e3881864879774b7712ebe00cdd3e",
+          "status": "pass"
+        },
+        {
+          "repeat": 2,
+          "command": [
+            "D:\\uv-envs\\base\\.venv\\Scripts\\python.exe",
+            "-B",
+            "D:\\CodexWorktrees\\bc5b\\research-workflow\\experiments\\openresearch-ab-20260926\\fixture\\solution.py",
+            "C:\\Users\\QQ110\\AppData\\Local\\Temp\\openresearch-eval-ryq_6e5f\\dev-1.input.jsonl",
+            "C:\\Users\\QQ110\\AppData\\Local\\Temp\\openresearch-eval-ryq_6e5f\\dev-1.run-2.jsonl"
+          ],
+          "returncode": 0,
+          "elapsed_sec": 2.322103,
+          "rows_per_sec": 775159.41,
+          "input_mib_per_sec": 51.93,
+          "peak_job_memory_bytes": 10170368,
+          "output_sha256": "d19b19917422fa843beb047bb660aefb959e3881864879774b7712ebe00cdd3e",
+          "status": "pass"
+        }
+      ],
+      "median_pass_elapsed_sec": 2.392079
+    },
+    {
+      "id": "dev-2",
+      "seed": 37587,
+      "rows": 1800000,
+      "input_bytes": 126446374,
+      "input_sha256": "79af1ae24d55b06bb3edeb8671b5761c66c23bb3a43c830124563f89e1748abb",
+      "expected_sha256": "534e61fcfe6a9b5b2e1f1e7109b1fa85a5472bff0f15eaa9dd71175c69242a9c",
+      "runs": [
+        {
+          "repeat": 1,
+          "command": [
+            "D:\\uv-envs\\base\\.venv\\Scripts\\python.exe",
+            "-B",
+            "D:\\CodexWorktrees\\bc5b\\research-workflow\\experiments\\openresearch-ab-20260926\\fixture\\solution.py",
+            "C:\\Users\\QQ110\\AppData\\Local\\Temp\\openresearch-eval-ryq_6e5f\\dev-2.input.jsonl",
+            "C:\\Users\\QQ110\\AppData\\Local\\Temp\\openresearch-eval-ryq_6e5f\\dev-2.run-1.jsonl"
+          ],
+          "returncode": 0,
+          "elapsed_sec": 2.392869,
+          "rows_per_sec": 752235.08,
+          "input_mib_per_sec": 50.4,
+          "peak_job_memory_bytes": 10178560,
+          "output_sha256": "534e61fcfe6a9b5b2e1f1e7109b1fa85a5472bff0f15eaa9dd71175c69242a9c",
+          "status": "pass"
+        },
+        {
+          "repeat": 2,
+          "command": [
+            "D:\\uv-envs\\base\\.venv\\Scripts\\python.exe",
+            "-B",
+            "D:\\CodexWorktrees\\bc5b\\research-workflow\\experiments\\openresearch-ab-20260926\\fixture\\solution.py",
+            "C:\\Users\\QQ110\\AppData\\Local\\Temp\\openresearch-eval-ryq_6e5f\\dev-2.input.jsonl",
+            "C:\\Users\\QQ110\\AppData\\Local\\Temp\\openresearch-eval-ryq_6e5f\\dev-2.run-2.jsonl"
+          ],
+          "returncode": 0,
+          "elapsed_sec": 2.370236,
+          "rows_per_sec": 759418.05,
+          "input_mib_per_sec": 50.88,
+          "peak_job_memory_bytes": 10461184,
+          "output_sha256": "534e61fcfe6a9b5b2e1f1e7109b1fa85a5472bff0f15eaa9dd71175c69242a9c",
+          "status": "pass"
+        }
+      ],
+      "median_pass_elapsed_sec": 2.381552
+    },
+    {
+      "id": "dev-3",
+      "seed": 50783,
+      "rows": 1800000,
+      "input_bytes": 126443539,
+      "input_sha256": "56a6738aea3f1fa727799f1ed871f017231faa6f82b174ef31506fe174744b19",
+      "expected_sha256": "1ef4d54fe2459721161b39b1cb26f7e93a1d10196a0d1c75bd0e5eb92aed3254",
+      "runs": [
+        {
+          "repeat": 1,
+          "command": [
+            "D:\\uv-envs\\base\\.venv\\Scripts\\python.exe",
+            "-B",
+            "D:\\CodexWorktrees\\bc5b\\research-workflow\\experiments\\openresearch-ab-20260926\\fixture\\solution.py",
+            "C:\\Users\\QQ110\\AppData\\Local\\Temp\\openresearch-eval-ryq_6e5f\\dev-3.input.jsonl",
+            "C:\\Users\\QQ110\\AppData\\Local\\Temp\\openresearch-eval-ryq_6e5f\\dev-3.run-1.jsonl"
+          ],
+          "returncode": 0,
+          "elapsed_sec": 2.427917,
+          "rows_per_sec": 741376.25,
+          "input_mib_per_sec": 49.67,
+          "peak_job_memory_bytes": 10190848,
+          "output_sha256": "1ef4d54fe2459721161b39b1cb26f7e93a1d10196a0d1c75bd0e5eb92aed3254",
+          "status": "pass"
+        },
+        {
+          "repeat": 2,
+          "command": [
+            "D:\\uv-envs\\base\\.venv\\Scripts\\python.exe",
+            "-B",
+            "D:\\CodexWorktrees\\bc5b\\research-workflow\\experiments\\openresearch-ab-20260926\\fixture\\solution.py",
+            "C:\\Users\\QQ110\\AppData\\Local\\Temp\\openresearch-eval-ryq_6e5f\\dev-3.input.jsonl",
+            "C:\\Users\\QQ110\\AppData\\Local\\Temp\\openresearch-eval-ryq_6e5f\\dev-3.run-2.jsonl"
+          ],
+          "returncode": 0,
+          "elapsed_sec": 2.329306,
+          "rows_per_sec": 772762.36,
+          "input_mib_per_sec": 51.77,
+          "peak_job_memory_bytes": 10199040,
+          "output_sha256": "1ef4d54fe2459721161b39b1cb26f7e93a1d10196a0d1c75bd0e5eb92aed3254",
+          "status": "pass"
+        }
+      ],
+      "median_pass_elapsed_sec": 2.378611
+    }
+  ],
+  "failures": [],
+  "solution_sha256_after": "1c38ddf8ca0225dfbe4c38bd32c9e098302c8bee9eba53bbef6539914caf1b0a",
+  "overall_status": "pass"
+}
